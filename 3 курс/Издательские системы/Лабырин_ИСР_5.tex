@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=2cm,right=2cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage[skip=1em]{parskip}
+
+\author{Лабырин Матвей, 1 подгруппа}
+\title{Команды создания текстового документа в \LaTeX}
+
+% chktex-file 18
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Команды создания документа}
+
+При создании документа в \LaTeX, в условном "заголовке" документа мы указываем следующие команды, задающие параметры генерации документа:
+
+$\backslash documentclass[params]\{class\}$ --- задаёт класс документа \emph{class} с заданными в \emph{params} параметрами.
+Например, $\backslash documentclass[12pt]\{article\}$ задаст класс \emph{article} с параметром величины шрифта в \emph{12pt}.
+
+$\backslash usepackage[params]\{package\}$ --- подключает к документу пакет \emph{package} с заданными в \emph{params} параметрами.
+Например, $\backslash usepackage[russian]\{babel\}$ подключит пакет работы с языками \emph{babel} с параметром-флагом \emph{russian}, т.е. для русского языка.
+
+$\backslash author\{author\}$ --- задаёт автора документа (по умолчанию отсутствует).
+
+$\backslash title\{title\}$ --- задаёт название документа (по умолчанию отсутствует).
+
+$\backslash date\{date\}$ --- задаёт дату документа (по умолчанию равна текущей дате, т.е. команде $\backslash today$).
+
+$\backslash begin\{document\} \cdots \backslash end\{document\}$ --- команды задачи окружения, которые задают тело документа (т.е. само его содержание). Всё, что внутри этого окружения, будет так или иначе отображаться в самом документе.
+
+\section{Команды создания текста в документе}
+
+Внутри окружения \emph{document} располагается само тело документа.
+По умолчанию оно совершенно пустое, что совершенно логично --- ведь мы там ещё ничего не написали.
+Следующие команды позволят автоматически сгенерировать внутри документа некоторые тривиальные вещи, основываясь на классе документа и на его параметрах:
+
+$\backslash maketitle$ --- генерирует заголовок документа, отображая в нём по умолчанию название, автора и дату документа (для класса \emph{article}).
+
+$\backslash tableofcontents$ --- генерирует содержание документа из указанных в нём глав.
+
+$\backslash section\{title\}$ (а также $\backslash subsection\{title\}$, $\backslash subsubsection\{title\}$) --- генерирует не только заголовок главы/подглавы/подподглавы, но и сам структурный элемент текста, позволяя, например, команде $\backslash tableofcontents$ генерировать содержание.
+Номера, что очень удобно, генерируются автоматически.
+
+\section{Заключение}
+
+Приведённых выше команд уже достаточно для создания полноценного текстового документа без форматирования.
+
+Спасибо за внимание!
+
+\end{document}

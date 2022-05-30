@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=2cm,right=2cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage[skip=1em]{parskip}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\author{Лабырин М. С., 1 подгруппа}
+\title{Диакритические знаки, матрицы\\Лабораторная работа 4}
+
+% \hfuzz=30pt
+
+\begin{document}
+
+\maketitle
+
+\section{Диакритические знаки}
+
+\subsection{Надстрочные}
+
+\[\dot{x} = 0\]
+\[\tilde{a} = \bar{b}\]
+\[\tilde{a} = \overline{bcde}\]
+
+широкая тильда
+
+\[\widetilde{afgh} = \overline{bcde}\]
+
+многоточие $\cdots$
+
+\subsection{Векторы}
+Вектор а имеет координаты (0;3;4)
+\[\overrightarrow{a}(0;3;4)\]
+
+Запись вектора жирным шрифтом, а не стрелкой сверху
+\[\overrightarrow{a} = \mathbf{a}\]
+
+\subsection{Фигурная скобка}
+\[\underbrace{1 + 2 + \cdots + n} = N\]
+\[\underbrace{1 + 2 + \cdots + n}_n = N\]
+
+\begin{equation}
+  \underbrace{1 + 2 + \cdots + n} = N
+\end{equation}
+
+\begin{equation}
+  \underbrace{1 + 2 + \cdots + n}_n = N
+\end{equation}
+
+\begin{equation}
+  \overbrace{1 + 2 + \cdots + n}^n = N
+\end{equation}
+
+\subsection{Написание условия перехода над знаком}
+команда \textbf{stackrel}\\
+Например:
+\[ (x - 1) (x + 1) > 0 \stackrel{x > 0}{\longleftrightarrow} (x - 1) > 0 \]
+
+\section{Буквы других алфавитов}
+
+\[ \sin \alpha = 0 \]
+\[ \omega = \frac{2 \pi}{T} \]
+непривычный вид\\
+$\epsilon$\\
+$\phi$
+
+как в учебниках\\
+$\varepsilon$\\
+$\varphi$
+
+\subsection{Математические шрифты}
+много\\
+один из них \textbf{mathbb}
+находятся во вкладке Математика/Математические шрифты
+\[ x \in R \]
+\[ x \in \mathbb{R} \]
+
+\subsection{Кириллические символы}
+используется команда \textbf{text}
+\[ m_{\text{груза}} = 15~\text{кг} \]
+
+Для пробела между обозначением величины и её численным значением необходимо
+использовать тильду \char`\~
+
+\section{Выравнивание формул}
+окружение \textbf{aligned}\\
+определяет выравнивание амперсант \&
+
+\section{Группировка формул}
+\begin{equation}
+  \begin{aligned}
+    4 & \times a = 8 \\
+    -5 & \times b = 10 \\
+    -10 & \times c = 110 \\
+  \end{aligned}
+\end{equation}
+
+\subsection{Системы уравнений}
+
+\[
+  \left \{
+    \begin{aligned}
+      4 & \times a = 8 \\
+      -5 & \times b = 10 \\
+      -10 & \times c = 110 \\
+    \end{aligned}
+  \right.
+\]
+
+\[
+  \left.
+    \begin{aligned}
+      4 & \times a = 8 \\
+      -5 & \times b = 10 \\
+      -10 & \times c = 110 \\
+    \end{aligned}
+  \right \}
+\]
+
+\[
+  \left.
+    \begin{aligned}
+      4 & \times a = 8 \\
+      -5 & \times b = 10 \\
+      -10 & \times c = 110 \\
+    \end{aligned}
+  \right \} \Rightarrow -12ab = 24
+\]
+
+\section{Матрицы}
+Создаются за счёт окружения \textbf{matrix}
+
+\subsection{Матрица в круглых скобках}
+
+\[
+  \begin{pmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+  \end{pmatrix}
+\]
+
+\subsection{Матрица в квадратных скобках}
+
+\[
+  \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+  \end{bmatrix}
+\]
+
+\[
+  \begin{Vmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+  \end{Vmatrix}
+\]
+
+\subsection{Определитель}
+
+\[
+  \begin{vmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+  \end{vmatrix}
+\]
+
+\end{document}

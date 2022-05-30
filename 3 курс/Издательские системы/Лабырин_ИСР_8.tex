@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=2cm,right=2cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage[skip=1em]{parskip}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\author{Лабырин М. С., 1 подгруппа}
+\title{Команды набора матриц в \LaTeX{}}
+
+% \hfuzz=30pt
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  % chktex-file 44
+  \begin{tabular}{ || l | l || }
+
+    \hline
+    Назначение команды & Вид (написание) команды \\ \hline
+    \hline
+
+    Матрица без скобок &
+    $\backslash begin\{matrix\}$ \\ &
+    foo \& $\cdots$ \& bar $\backslash\backslash$ \\ &
+    $\cdots$ \\ &
+    $\backslash end\{matrix\}$ \\ \hline
+
+    Матрица в круглых скобках &
+    $\backslash begin\{pmatrix\}$ \\ &
+    foo \& $\cdots$ \& bar $\backslash\backslash$ \\ &
+    $\cdots$ \\ &
+    $\backslash end\{pmatrix\}$ \\ \hline
+
+    Матрица в квадратных скобках &
+    $\backslash begin\{bmatrix\}$ \\ &
+    foo \& $\cdots$ \& bar $\backslash\backslash$ \\ &
+    $\cdots$ \\ &
+    $\backslash end\{bmatrix\}$ \\ \hline
+
+    Матрица в фигурных скобках &
+    $\backslash begin\{Bmatrix\}$ \\ &
+    foo \& $\cdots$ \& bar $\backslash\backslash$ \\ &
+    $\cdots$ \\ &
+    $\backslash end\{Bmatrix\}$ \\ \hline
+
+    Матрица в прямых скобках (определитель) &
+    $\backslash begin\{vmatrix\}$ \\ &
+    foo \& $\cdots$ \& bar $\backslash\backslash$ \\ &
+    $\cdots$ \\ &
+    $\backslash end\{vmatrix\}$ \\ \hline
+
+    Матрица в двойных прямых скобках (норма) &
+    $\backslash begin\{Vmatrix\}$ \\ &
+    foo \& $\cdots$ \& bar $\backslash\backslash$ \\ &
+    $\cdots$ \\ &
+    $\backslash end\{Vmatrix\}$ \\ \hline
+
+    Маленькая (строчная - $
+      \begin{smallmatrix}
+        \alpha & \beta \\
+        \gamma & \delta
+      \end{smallmatrix}
+    $) матрица &
+    $\backslash begin\{smallmatrix\}$ \\ &
+    foo \& $\cdots$ \& bar $\backslash\backslash$ \\ &
+    $\cdots$ \\ &
+    $\backslash end\{smallmatrix\}$ \\ \hline
+
+  \end{tabular}
+\end{center}
+
+\end{document}

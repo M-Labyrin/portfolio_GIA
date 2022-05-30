@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=2cm,right=2cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage[skip=1em]{parskip}
+
+\usepackage{multicol}
+
+% \usepackage{fontspec}
+% \setmainfont{Arial}
+
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+
+\author{Лабырин М. С., 1 подгруппа}
+\title{Таблица Интегралов и дифференциалов}
+
+% \hfuzz=30pt
+
+% chktex-file 44 (Чтобы линтер не ругался на стандартные таблички - он
+% предлагает использовать пакет booktabs и НЕ использовать крайние линии)
+
+\renewcommand{\arraystretch}{2} % Хак для высоты строк
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols}{2}
+
+  \section*{Интегралы}
+
+  \begin{tabular}{ || l | l || }
+    \hline
+    Выражение & Эквивалент \\
+    \hline
+
+    $\displaystyle\int dx$ & $x + C$ \\[5pt]
+    \hline
+
+    $\displaystyle\int x^n \cdot dx$ & $\displaystyle \frac{x^{n + 1}}{n + 1} + C$, \\ &
+    $n \neq -1$, $x > 0$ \\
+    \hline
+
+    $\displaystyle \int \frac{dx}{x}$ & $\ln |x| + C$ \\[5pt]
+    \hline
+
+    $\displaystyle \int a^x dx$ & $\displaystyle \frac{a^x}{\ln a} + C$ \\[5pt]
+    \hline
+
+    $\displaystyle \int e^x dx$ & $e^x + C$ \\[5pt]
+    \hline
+  \end{tabular}
+
+  \columnbreak
+
+  \section*{Дифференциалы}
+
+  \begin{tabular}{ || l | l || }
+    \hline
+    Выражение & Эквивалент \\
+    \hline
+
+    $d(x^n)$ & $nx^{n - 1} dx$ \\
+    \hline
+
+    $d(a^x)$ & $a^x \cdot \ln a~dx$ \\
+    \hline
+
+    $d(e^x)$ & $e^x dx$ \\
+    \hline
+
+    $d(\log_a x)$ & $\displaystyle \frac{dx}{x \ln a}$ \\[5pt]
+    \hline
+
+    $d(\ln x)$ & $\displaystyle \frac{dx}{x}$ \\[5pt]
+    \hline
+  \end{tabular}
+
+\end{multicols}
+
+\end{document}

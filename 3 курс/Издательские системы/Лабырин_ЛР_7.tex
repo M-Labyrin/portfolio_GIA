@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=2cm,right=2cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage[skip=1em]{parskip}
+
+\author{Лабырин М. С., 1 подгруппа}
+\title{Особенности технологии создания\\текста с формулами в \LaTeX}
+
+\begin{document}
+
+\maketitle
+
+\[
+  \int \frac{dx}{\ln x} =
+  \ln |\ln x|
+  + \sum^{\infty}_{i-1} \frac{{(\ln x)}^i}{i \cdot i!}
+\]
+\[
+  \int \frac{dx}{{(\ln x)}^n} =
+  - \frac{x}{(n - 1){(\ln x)}^{n - 1}}
+  + \frac{1}{n - 1} \int \frac{dx}{{(\ln x)}^{n - 1}}
+  \textrm{ для }
+  n \neq 1
+\]
+\[
+  \int x^m \ln x~dx =
+  x^{m + 1} \left(
+  \frac{\ln x}{m + 1}
+  - \frac{1}{{(m + 1)}^2}
+  \right)
+  \textrm{ для }
+  m \neq -1
+\]
+\[
+  \int x^m {(\ln x)}^n dx =
+  \frac{x^{m + 1} {(\ln x)}^n}{m + 1}
+  - \frac{n}{m + 1} \int x^m {(\ln x)}^{n - 1} dx
+  \textrm{ для }
+  m \neq -1
+\]
+\[
+  \int \frac{{(\ln x)}^n dx}{x} =
+  \frac{{(\ln x)}^{n + 1}}{n + 1}
+  \textrm{ для }
+  n \neq -1
+\]
+\[
+  \int \frac{\ln x~dx}{x^m} =
+  - \frac{\ln x}{(m - 1) x^{m - 1}}
+  - \frac{1}{{(m - 1)}^2 x^{m - 1}}
+  \textrm{ для }
+  m \neq 1
+\]
+\[
+  \int \frac{{(\ln x)}^n dx}{x^m} =
+  - \frac{{(\ln x)}^n}{(m - 1) x^{m - 1}}
+  + \frac{n}{m - 1} \int \frac{{(\ln x)}^{n - 1} dx}{x^m}
+  \textrm{ для }
+  m \neq 1
+\]
+
+\end{document}

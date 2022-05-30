@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=2cm,right=2cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage[skip=1em]{parskip}
+
+\usepackage{amsmath}
+
+\author{Лабырин М. С., 1 подгруппа}
+\title{Создание матриц средствами \LaTeX{}}
+
+% \hfuzz=30pt
+
+\begin{document}
+
+\maketitle
+
+\section*{Пример 1. Умножение матрицы на число}
+
+\textbf{Дано:}
+
+Матрица $
+  A = \begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+  \end{pmatrix}
+$ \\
+Число $k = 2$.
+
+\textbf{Найти:}
+
+Произведние матрицы на число: $A \times k = B$ \\
+$B~-~?$
+
+\textbf{Решение:}
+
+Для того, чтобы умножить матрицу $A$ на число $k$, нужно каждый элемент матрицы
+$A$ умножить на это число.\\
+Таким образом, произведение матрицы $A$ на число $k$ есть новая матрица:
+
+$
+  B = 2 \times A = 2 \times \begin{pmatrix}
+    1 & 2 & 3 \\
+    4 & 5 & 6
+  \end{pmatrix} = \begin{pmatrix}
+    2 & 4 & 6 \\
+    8 & 10 & 12
+  \end{pmatrix}
+$
+
+\textbf{Ответ:} $B = \begin{pmatrix}
+  2 & 4 & 6 \\
+  8 & 10 & 12
+\end{pmatrix}$
+
+\newpage
+
+\section*{Пример 2. Умножение матриц}
+
+\textbf{Дано:}
+
+Матрица $A = \begin{pmatrix}
+  2 & 3 & 1 \\
+  -1 & 0 & 1
+\end{pmatrix}$
+
+Матрица $B = \begin{pmatrix}
+  2 & 1 \\
+  -1 & 1 \\
+  3 & -2 \\
+\end{pmatrix}$
+
+\textbf{Найти:}
+
+Произведение матриц: $A \times B = C$\\
+$C~-~?$
+
+\textbf{Решение:}
+
+Каждый элемент матрицы $C = A \times B$, расположенный в $i$-й строке и $j$-м
+столбце, равен сумма произведений элементов $i$-й строки матрицы $A$ на
+соответствующие элементы $j$-го столбца матрицы $B$. Строки матрицы $A$ умножаем
+на столбцы матрицы $B$ и получаем:
+
+$
+  C = A \times B = \begin{pmatrix}
+    2 & 3 & 1 \\
+    -1 & 0 & 1
+  \end{pmatrix} \times \begin{pmatrix}
+    2 & 1 \\
+    -1 & 1 \\
+    3 & -2
+  \end{pmatrix} =
+$
+
+$
+  = \begin{pmatrix}
+    2 \times 2 + 3 \times (-1) + 1 \times 3 & 2 \times 1 + 3 \times 1 + 1 \times (-2) \\
+    -1 \times 2 + 0 \times (-1) + 1 \times 3 & -1 \times 1 + 0 \times 1 + 1 \times (-2)
+  \end{pmatrix}
+$
+
+$
+  C = A \times B = \begin{pmatrix}
+    4 & 3 \\
+    1 & -3
+  \end{pmatrix}
+$
+
+\textbf{Ответ:}
+$
+  C = A \times B = \begin{pmatrix}
+    4 & 3 \\
+    1 & -3
+  \end{pmatrix}
+$
+
+\end{document}

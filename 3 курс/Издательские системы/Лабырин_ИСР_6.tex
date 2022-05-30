@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[left=2cm,right=2cm,
+  top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage[skip=1em]{parskip}
+
+\author{Лабырин М. С., 1 подгруппа}
+\title{Команды форматирования в \LaTeX}
+
+\hfuzz=30pt
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  % chktex-file 44
+  \begin{tabular}{ || l | l || }
+
+    \hline
+    Назначение команды & Вид (написание) команды \\ \hline
+    \hline
+
+    Маркированный список &
+    $\backslash begin\{itemize\}$ \\ &
+    $\backslash item$ foo \\ &
+    $\cdots$ \\ &
+    $\backslash item$ bar \\ &
+    $\backslash end\{itemize\}$ \\ \hline
+
+    Нумерованный список &
+    $\backslash begin\{enumerate\}$ \\ &
+    $\backslash item$ foo \\ &
+    $\cdots$ \\ &
+    $\backslash item$ bar \\ & 
+    $\backslash end\{enumerate\}$ \\ \hline
+
+    Центрирование &
+    $\backslash begin\{center\}$ \\ &
+    lorem \ldots \\ &
+    $backslash end\{center\}$ \\ &
+    ИЛИ \\ &
+    $\backslash centering$ \\ \hline
+
+    Выравнивание по левому краю &
+    $\backslash begin\{flushleft\}$ \\ &
+    lorem \ldots \\ &
+    $backslash end\{flushleft\}$ \\ &
+    ИЛИ \\ &
+    $\backslash raggedright$ \\ \hline
+
+    Выравнивание по правому краю &
+    $\backslash begin\{flushright\}$ \\ &
+    lorem \ldots \\ &
+    $backslash end\{flushright\}$ \\ &
+    ИЛИ \\ &
+    $\backslash raggedleft$ \\ \hline
+
+    Неразрывный пробел &
+    $\sim$ \\ \hline
+
+    Перенос строки &
+    $\backslash \backslash$ \\ &
+    ИЛИ \\ &
+    $\backslash newline$ \\ \hline
+
+    Полужирный шрифт &
+    $\backslash textbf\{text\}$ \\ \hline
+
+    Курсив &
+    $\backslash textit\{test\}$ \\ \hline
+
+    Подчёркивание &
+    $\backslash underline\{text\}$ \\ \hline
+
+    Эмфазис (выделение, по умолчанию переключает курсив) &
+    $\backslash emph\{text\}$ \\ \hline
+
+    Ввод формул (в той же строке) &
+    $\$ formula \$$ \\ \hline
+
+    Ввод формул (отдельным блоком) &
+    $\backslash [ formula \backslash ]$ \\ \hline
+
+    Сноска &
+    $\backslash footnote\{some~text\}$ \\ \hline
+
+    Огромный шрифт &
+    $\backslash huge\{text\}$ \\ \hline
+
+    Маленький шрифт &
+    $\backslash tiny\{text\}$ \\ \hline
+
+  \end{tabular}
+\end{center}
+
+\end{document}
